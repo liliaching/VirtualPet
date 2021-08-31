@@ -1,9 +1,18 @@
-void setup(){
-  //some of your code here
-  size (500,500);
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(500, 500);
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
 }
-void draw(){
-  //more of your code here
+
+public void draw() {
+  background(192);
+  int x = arduino.analogRead(5);
+  System.out.println(x);
+ 
+
   fill (110, 52, 48);
   //legs
   ellipse (207,440,45,85);
@@ -16,8 +25,8 @@ void draw(){
   ellipse (250,180,150,150);
   
  //arms  
-  ellipse (210,290,45,85);
-  ellipse (287,290,45,85);
+  ellipse (210+x,290,45,85);
+  ellipse (287+x,290,45,85);
   
   //ears
   ellipse (200,100,45,45);
