@@ -1,20 +1,10 @@
-import processing.serial.*;
-import cc.arduino.*;
-Arduino arduino;
-
-public void setup() {
-  size(500, 500);
-  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
-}
-
-public void draw() {
-  background(192);
-  int x = arduino.analogRead(5);
-  System.out.println(x);
+  public void setup() {
+  size (500,500);
+  background (1,116,34);
+  fill (155,138,126);
+  }
   
-  background (255,255,255);
-   
-  fill (255,255,255);
+  public void draw() {
   
   //legs
   ellipse (207,440,45,85);
@@ -26,9 +16,9 @@ public void draw() {
   //face
   ellipse (250,180,150,150);
   
-  int yCord = 400;
-  if (yCord >= 400) {
-   yCord=400; }
+  int yCord = 300;
+  if (yCord >= 300) {
+  yCord=300; }
   
   //arms  
   ellipse (210,yCord,45,85*x);
