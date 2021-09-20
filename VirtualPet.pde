@@ -1,39 +1,35 @@
-  public void setup() {
-  size (500,500);
-  background (1,116,34);
-  fill (155,138,126);
-  }
-  
-  public void draw() {
-  
+public void setup() {
+  size (500, 500);
+  background (84, 125, 90);
+}
+public void draw() {
+  noStroke ();
   //legs
-  ellipse (207,440,45,85);
-  ellipse (287,440,45,85);
-  
+  fill (0, 0, 0);
+  ellipse (207, 440, 45, 85);
+  ellipse (287, 440, 45, 85);
+
+  fill (255, 255, 255);
   //body
-  ellipse (250,320,165,199);
-  
+  ellipse (250, 327, 165, 199);
+
   //face
-  ellipse (250,180,150,150);
-  
-  int yCord = 300;
-  if (yCord >= 300) {
-  yCord=300; }
-  
-  //arms  
-  ellipse (210,yCord,45,85*x);
-  ellipse (287,yCord,45,85*x);
- 
-  //ears
-  ellipse (200,100,45,45);
-  ellipse (300,100,45,45);
-  
+  fill (255, 255, 255);
+  ellipse (250, 180, 150, 150);
+
   //eyes
-  fill (0,0,0);
-  ellipse (210,180,30,30);
-  ellipse (287,180,30,30);
-  
+  fill(0, 0, 0);
+  ellipse (210, 180, 30, 30);
+  ellipse (287, 180, 30, 30);
+
+  //arms
+  ellipse (210, 287, 45, 95);
+  ellipse (287, 287, 45, 95);
+
+  //ears
+  ellipse (200, 100, 45, 45);
+  ellipse (300, 100, 45, 45);
+
   //nose
-  triangle (242,200,255,217,265,200);
-  
+  triangle (242, 200, 255, 217, 265, 200);
 }
